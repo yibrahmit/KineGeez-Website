@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans Ethiopic", system-ui, sans-serif;
+  --font-serif: "Noto Serif Ethiopic", Georgia, serif;
+  --color-parchment: #f7f1e3;
+  --color-paper: #fffaf0;
+  --color-ink: #1d1a16;
+  --color-umber: #5c4a32;
+  --color-gold: #b8862b;
+  --color-gold-dark: #8a6216;
+  --color-gold-light: #dfb15b;
+  --color-crimson: #8b1e0f;
+  --color-crimson-dark: #66150a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Simulated Watermark repeating diagonal background */
+.watermark-overlay {
+  background-image: repeating-linear-gradient(
+    -35deg,
+    rgba(184, 134, 43, 0.07),
+    rgba(184, 134, 43, 0.07) 1px,
+    transparent 1px,
+    transparent 160px
+  );
+}
+
+/* User-select deterrence on protected reading demo */
+.select-disabled {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

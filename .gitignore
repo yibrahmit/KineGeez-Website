@@ -1,0 +1,9 @@
+node_modules/
+dist/
+uploads/**
+package-lock.json
+!uploads/.gitkeep
+!uploads/resumes/.gitkeep
+.env
+*.env.local
+.env.production
