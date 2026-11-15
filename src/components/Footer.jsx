@@ -1,6 +1,6 @@
 import { useLanguage } from "../context/LanguageContext";
 import { phone, socials } from "../contact.js";
-import { ShieldCheckIcon } from "./Icons";
+import { ShieldCheckIcon, PhoneIcon, SocialIcon } from "./Icons";
 
 export default function Footer() {
   const { lang, t } = useLanguage();
@@ -74,10 +74,16 @@ export default function Footer() {
               {t.footer.contactTitle}
             </h4>
             <p className="mb-2">
-              <a href={`tel:${phone.href}`} className="font-semibold text-ink hover:text-gold-dark">
-                {phone.display}
+              <a
+                href={`tel:${phone.href}`}
+                className="inline-flex items-center gap-2 font-semibold text-ink hover:text-gold-dark transition"
+              >
+                <PhoneIcon className="w-3.5 h-3.5 text-gold-dark" />
+                <span>{phone.display}</span>
               </a>
             </p>
+
+            {/* Social Links with Logos */}
             <div className="flex flex-wrap gap-2 mt-3">
               {activeSocials.map((s) => (
                 <a
@@ -85,12 +91,16 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-umber/20 px-3 py-1 hover:border-ink hover:text-ink"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-umber/20 px-3 py-1.5 text-xs text-umber transition hover:border-gold hover:text-ink hover:bg-paper group"
                 >
-                  {s.name}
+                  <span className="text-umber/75 group-hover:text-gold-dark transition">
+                    <SocialIcon name={s.name} className="w-3.5 h-3.5" />
+                  </span>
+                  <span>{s.name}</span>
                 </a>
               ))}
             </div>
+
             <p className="mt-4 text-[11px] text-umber/75">
               {t.footer.rightsNotice}
             </p>

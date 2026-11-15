@@ -7,7 +7,7 @@ export const phone = {
 export const socials = [
   { name: "Telegram", href: "https://t.me/kine_geez" },
   { name: "Facebook", href: "https://web.facebook.com/profile.php?id=61595883670872" },
-  { name: "LinkedIn", href: "" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/kine-geez" },
   { name: "YouTube", href: "" },
   { name: "TikTok", href: "" },
 ];
